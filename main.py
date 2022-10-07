@@ -6,13 +6,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    #url = 'http://api.ipstack.com/check?access_key=92fa815043bdad90aaaeb3b1ec112032'
-    #req = requests.get(url)
-    #response = req.json()
-    #city = response["city"]
-    #country = response["country_name"]
-    city="Bentonville"
-    country="USA"
+    url = 'http://api.ipstack.com/check?access_key=92fa815043bdad90aaaeb3b1ec112032'
+    req = requests.get(url)
+    response = req.json()
+    city = response["city"]
+    country = response["country_name"]
     return render_template('index.html', city=city, country=country)
 
 
