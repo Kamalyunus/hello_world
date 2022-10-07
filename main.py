@@ -11,7 +11,8 @@ def hello():
     response = req.json()
     city = response["city"]
     country = response["country_name"]
-    return render_template('index.html', city=city, country=country)
+    region = response["region_name"]
+    return render_template('index.html', city=city, region=region, country=country)
 
 
 if __name__ == '__main__':
