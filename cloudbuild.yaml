@@ -1,3 +1,4 @@
+# Cloudbuild Yaml for automated deployment
 steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'bash'
